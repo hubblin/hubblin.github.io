@@ -1,0 +1,55 @@
+$color-bg: #efeeee;
+$color-shadow: #babecc;
+$color-white: #fff;
+$color-red: #ae1100;
+$ruler: 16px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  z-index: -3;
+  background-color: $color-bg;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+body,
+p,
+input,
+select,
+textarea,
+button {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.2px;
+  font-size: $ruler;
+}
+
+div,
+p {
+  color: $color-shadow;
+  text-shadow: 1px 1px 1px $color-white;
+}
+
+form {
+  padding: $ruler;
+  width: $ruler * 20;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 60px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 50px;
+}
