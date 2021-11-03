@@ -6,6 +6,7 @@ import pickup from "../images/pickups.png";
 import note from "../images/note.gif";
 import picker from "../images/picker.gif";
 import word from "../images/word.jpg";
+import popol from "../images/popol.png";
 
 const Portfolio = memo(({ refs }) => {
   return (
@@ -137,6 +138,29 @@ const Portfolio = memo(({ refs }) => {
               href="https://github.com/hubblin/Final_frontend"
             >
               github link
+            </a>
+          </div>
+        </div>
+        <div className="portfolio-info-area">
+          <div className="portfolio-info">
+            <div className="picture-area">
+              <img src={popol} alt="죄송합니다 이미지를 불러오지 못했습니다." />
+            </div>
+            <div className="title">MMFIN.의 웹 포트폴리오</div>
+            <div className="contents">
+              개인 프로젝트 <br />
+              <br /> 저를 소개하는 웹 페이지 입니다.
+              <br /> React로 제작하였으며 about me, skills, portfolio의 단락으로
+              나누어져 있습니다.
+            </div>
+            <a
+              className="button"
+              href="https://github.com/hubblin/hubblin.github.io"
+            >
+              github link
+            </a>
+            <a className="button" href="https://hubblin.github.io/">
+              publish link
             </a>
           </div>
         </div>
