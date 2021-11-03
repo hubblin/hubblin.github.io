@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "../styles/about.scss";
 import img from "../images/myficture.jpg";
 
@@ -9,9 +9,9 @@ import {
   IoCalendarClearOutline,
 } from "react-icons/io5";
 
-const About = () => {
+const About = memo(({ refs }) => {
   return (
-    <section className="about-section">
+    <section ref={refs} className="about-section">
       <div className="section-title">ABOUT ME</div>
 
       <div className="about-content">
@@ -57,6 +57,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
 
 export default About;

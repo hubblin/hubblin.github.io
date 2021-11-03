@@ -3,7 +3,7 @@ import "../styles/navbar.scss";
 
 import { MdMenu } from "react-icons/md";
 
-const Navbar = memo(() => {
+const Navbar = memo(({ handleScroll }) => {
   const [active, setActive] = useState(false);
 
   const click = useCallback(() => {
@@ -18,13 +18,15 @@ const Navbar = memo(() => {
 
           <ul className="navbar__menu">
             <li>
-              <a id="navbarAbout">About me</a>
+              <button onClick={() => handleScroll("about")}>About me</button>
             </li>
             <li>
-              <a id="navbarService">Skills</a>
+              <button onClick={() => handleScroll("skills")}>Skills</button>
             </li>
             <li>
-              <a id="navbarPortfolio">Portfolio</a>
+              <button onClick={() => handleScroll("portfolio")}>
+                Portfolio
+              </button>
             </li>
           </ul>
 
@@ -37,13 +39,34 @@ const Navbar = memo(() => {
         <div className="toggle__menu">
           <ul>
             <li>
-              <a href="">About me</a>
+              <button
+                onClick={() => {
+                  handleScroll("about");
+                  click();
+                }}
+              >
+                About me
+              </button>
             </li>
             <li>
-              <a href="">Skills</a>
+              <button
+                onClick={() => {
+                  handleScroll("skills");
+                  click();
+                }}
+              >
+                Skills
+              </button>
             </li>
             <li>
-              <a href="">Portfolio</a>
+              <button
+                onClick={() => {
+                  handleScroll("portfolio");
+                  click();
+                }}
+              >
+                Portfolio
+              </button>
             </li>
           </ul>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import "../styles/portfolio.scss";
 import paint from "../images/paint.png";
@@ -7,9 +7,9 @@ import note from "../images/note.gif";
 import picker from "../images/picker.gif";
 import word from "../images/word.jpg";
 
-const Portfolio = () => {
+const Portfolio = memo(({ refs }) => {
   return (
-    <section className="portfolio-section">
+    <section ref={refs} className="portfolio-section">
       <div className="section-title">PORTFOLIO</div>
       <div className="portfolio-content">
         <div className="portfolio-info-area">
@@ -143,6 +143,6 @@ const Portfolio = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Portfolio;

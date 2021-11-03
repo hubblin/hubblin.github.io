@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import "../styles/skills.scss";
 
@@ -17,9 +17,9 @@ import {
   Mongodb,
 } from "@icons-pack/react-simple-icons";
 
-const Skills = () => {
+const Skills = memo(({ refs }) => {
   return (
-    <section className="skills-section">
+    <section ref={refs} className="skills-section">
       <div className="section-title">SKILLS</div>
       <div className="skills-content">
         <h3 className="skill-title">frontend</h3>
@@ -106,5 +106,5 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
 export default Skills;
